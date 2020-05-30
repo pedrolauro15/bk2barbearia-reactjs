@@ -1,0 +1,21 @@
+#home-header {
+  display: fixed;
+  align-items: center;
+
+  width: 100vw;
+  padding: 5px 10px;
+  background-color: var(--secondary);
+}
+
+#home-header img {
+  width: 76px;
+}
+
+.home-header-menu {
+
+}
+
+.home-header-menu ul li {
+  display: inline-block;
+  padding-right: 4px;
+}
