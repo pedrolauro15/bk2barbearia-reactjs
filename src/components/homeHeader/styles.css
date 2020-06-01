@@ -1,9 +1,9 @@
 #home-header {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
-
+  margin-bottom: 100px;
   width: 100vw;
   padding: 10px 40px;
   background-color: var(--secondary);

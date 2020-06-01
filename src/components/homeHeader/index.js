@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.css';
+import Sobre from '../../components/sobre';
+import Servicos from '../../components/servicos';
 
 import { FaHome  } from 'react-icons/fa';
 import { GiBeard } from 'react-icons/gi';
@@ -10,7 +12,7 @@ import { FiInstagram, FiLogIn, FiPhone } from 'react-icons/fi';
 
 import assets from '../../assets';
 
-function HomeHeader() {
+function HomeHeader({id_sobre, id_promo, id_redes, id_contatos}) {
   function changeSelected(e){
 
     document.querySelector('.home-header-menu ul li.selected').classList.remove('selected');
@@ -23,7 +25,7 @@ function HomeHeader() {
 
       <div className="home-header-menu">
 	      <ul className="home-header-menu-ul">
-          <li className="selected" onClick={e => changeSelected(e)}><FaHome  className="header-icon"/><a className="" href="/./">HOME</a></li>
+          <li className="selected" onClick={e => changeSelected(e)}><a href="#servicos"><FaHome  className="header-icon"/>HOME</a></li>
           <li onClick={e => changeSelected(e)}><GiBeard className="header-icon"/> BK2 BARBEARIA</li>
           <li onClick={e => changeSelected(e)}><GoMegaphone className="header-icon"/> PROMOÇÕES</li>
           <li onClick={e => changeSelected(e)}><FiInstagram className="header-icon"/> REDES SOCIAIS</li>

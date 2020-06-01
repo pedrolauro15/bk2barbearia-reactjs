@@ -25,7 +25,7 @@ const lista = [
 
 function Sobre() {
   return(
-    <div id="sobre">
+    <div id="servicos" className="teste">
       <h1 className="titulo">BK2 BARBEARIA</h1>
         <hr/>
           <p>Fígaro Barbearia é um novo conceito de beleza, saúde e bem-estar voltado ao público masculino que está a cada dia mais exigente e atencioso as novidades.
