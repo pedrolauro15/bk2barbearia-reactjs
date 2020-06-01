@@ -1,0 +1,25 @@
+#botao {
+  cursor: pointer;
+  background-color: var(--primary);
+  color: #FFF;
+  padding: 10px 7px;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#botao svg {
+  font-size: 0.9rem;
+}
+
+#botao:hover {
+  opacity: 0.9;
+}
+
+#botao:active {
+  opacity: 0.8;
+}
