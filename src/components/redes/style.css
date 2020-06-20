@@ -1,15 +1,23 @@
-#sobre {
+#instagram {
   display: flex;
   flex-direction: column;
   padding: 0 15%;
   align-items: center;
+  margin-bottom: 25px;
 }
 
-.titulo,
-.titulo2 {
+#titulo {
+  padding-top: 2rem;
   font-size: 35px;
   text-align: center;
   margin-bottom: 3px;
+  color: var(--secondary);
+}
+
+#titulo2 {
+  align-self: flex-start;
+  padding-top: 2rem;
+  font-size: 30px;
   color: var(--secondary);
 }
 
@@ -22,10 +30,8 @@ hr {
 }
 
 p {
-  font-size: 1.25rem;
-  text-align: left;
-
-  line-height: 30px;
+  font-size: 1rem;
+  text-align: justify;
   margin-bottom: 15px;
 }
 
@@ -35,7 +41,6 @@ p {
   list-style: none;
   justify-content: space-between;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .img-list img {

@@ -3,7 +3,7 @@ import './styles.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 export default function Carosel() {
-  return(
+  return (
     <div>
       <Carousel>
         <Carousel.Item>
@@ -17,7 +17,7 @@ export default function Carosel() {
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
-  
+
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -30,7 +30,7 @@ export default function Carosel() {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
-  
+
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -40,7 +40,9 @@ export default function Carosel() {
 
           <Carousel.Caption>
             <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

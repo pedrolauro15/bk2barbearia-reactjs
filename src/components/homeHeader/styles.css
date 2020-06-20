@@ -1,17 +1,15 @@
 #home-header {
-  position: fixed;
+  padding: 15px 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 100px;
-  width: 100vw;
-  padding: 10px 40px;
   background-color: var(--secondary);
 }
 
 #home-header img {
-  width: 3rem;
-  height: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .home-header-menu {
@@ -38,10 +36,11 @@
   margin-right: 5px;
 }
 
-.home-header-menu ul li, .home-header-menu ul li a {
+.home-header-menu ul li,
+.home-header-menu ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
 
   font-weight: 400;
@@ -49,13 +48,11 @@
 
 .home-header-menu ul li:hover {
   opacity: 0.8;
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid #fff;
 }
 
-.home-header-menu ul li.selected {
-  border-bottom:2px solid #FFF;
+.home-header-menu ul li a.selected {
+  border-bottom: 2px solid #fff;
   transition: all 0ms;
   opacity: 0.8;
 }
-
-

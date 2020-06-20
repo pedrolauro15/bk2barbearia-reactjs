@@ -1,59 +1,77 @@
-import React from 'react';
-import './styles.css';
-import Botao from '../../components/botao';
-import { FaUser } from 'react-icons/fa';
-
-import assets from '../../assets';
+import React from "react";
+import { FaInstagram, FaUsers } from "react-icons/fa";
+import {
+  GiBalloons,
+  GiBeard,
+  GiCalendar,
+  GiPerspectiveDiceSixFacesRandom,
+  GiPodium,
+} from "react-icons/gi";
+import "./styles.css";
 
 const lista = [
   {
-    src: assets.logo_preta
+    title: "Completão",
+    icon: <GiBeard />,
+    text:
+      "A cada 3 cortes de cabelo ganhe 1 serviço completo: corte + barba + sobrancelha...",
   },
   {
-    src: assets.logo_preta
+    title: "Aniversáriante",
+    icon: <GiBalloons />,
+    text:
+      "No mês do seu aniversário você terá direito `a um dos serviços grátis. Podendo ser corte, barba, sobrancelha, etc...",
   },
   {
-    src: assets.logo_preta
+    title: "Indicação",
+    icon: <FaUsers />,
+    text: "A cada três pessoas indicadas ganhe um corte de cabelo grátis",
   },
   {
-    src: assets.logo_preta
+    title: "Ranking",
+    icon: <GiPodium />,
+    text:
+      "Cada corte com promoção vale 1 ponto no ranking BK2; O cliente que terminar o ano em primeiro lugar é vencedor no seu estilo de corte; Ao vencer, o cliente ganha um cupom para depositar na urna e concorrer aos 12 prêmios no final do ano",
   },
   {
-    src: assets.logo_preta
-  }
+    title: "Sorteio do isntagram",
+    icon: <FaInstagram />,
+    text:
+      "Todo cliente cadastrado que segue a BK2 Barbearia no instagram concorre, todo mês, à um corte grátis",
+  },
+  {
+    title: "Sorteio mensal",
+    icon: <GiCalendar />,
+    text:
+      "Toda pessoa que cortar no mês marca um ponto em uma lista e, no final do mês, será sorteado um corte grátis com os nomes dessa lista",
+  },
+  {
+    title: "Sorteio anual",
+    icon: <GiPerspectiveDiceSixFacesRandom />,
+    text:
+      "A cada 12 carimbos ganhe 1 cupom e deposite na urna para concorrer à 12 prêmios",
+  },
 ];
 
-function Sobre() {
-  return(
-    <div id="servicos" className="teste">
-      <h1 className="titulo">BK2 BARBEARIA</h1>
-        <hr/>
-          <p>Fígaro Barbearia é um novo conceito de beleza, saúde e bem-estar voltado ao público masculino que está a cada dia mais exigente e atencioso as novidades.
-              A barbearia que preza por um atendimento impecável do começo ao fim da sua experiência de corte, barba ou em qualquer um dos mais de 100 serviços corporais e faciais que a Fígaro oferece, com uma gama de produtos selecionados e profissionais qualificados para atender da melhor forma possível o homem moderno.
-              É o lugar certo para dar um trato no visual, encontrar amigos ou simplesmente relaxar.</p>
+function Promo() {
+  return (
+    <div id="promo" className="teste">
+      <h1>PROMOÇÕES</h1>
+      <hr />
 
-      <h1 className="titulo2">ESTRUTURA</h1>
-        <hr/> 
-          <p>A Fígaro Social Club possui uma área de 364m² e é totalmente climatizada. O espaço possui um salão principal com seis cadeiras de corte e barba, três lavatórios, um bar e espaço para jogos. Além de salas reservadas para depilação, estética facial e corporal, tratamento capilar, podologia e uma suíte exclusiva para o Dia do Noivão.
-              Fígaro Executive, a barbearia que soube aproveitar a conveniência do shopping, atende o homem moderno com serviços de cabelo e barba. Localizada dentro do RioMar Fortaleza Shopping a sua estrutura é composta por seis cadeiras Ferrante clássicas, lavatórios, recepção e cervejas sempre geladas.
-              Uma outra opção é Fígaro Executive Sul, que está presente em uma localização privilegiada na Av. Washington Soares, no Imperial Open Mall, com novo horário de funcionamento: 10h às 20h.</p>
+      <div id="promo_container">
+        {lista.map((item, index) => (
+          <div key={index} id="promocao">
+            <div className="icone_container">{item.icon}</div>
 
-
-        <ul className="img-list">
-            {
-              lista.map((item, i) => (
-                <li key={i}><img alt="img" src={item.src} style={{width: '150px'}}/>  </li>
-              ))
-            }
-        </ul>
-
-        <Botao
-          title="Saiba Mais"
-          onClick={()=>{alert("Clicou")}}
-          icon={<FaUser/>}
-        />
-        
+            <div className="text_container">
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-export default Sobre;
+export default Promo;
